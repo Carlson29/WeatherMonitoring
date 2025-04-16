@@ -24,15 +24,21 @@ public class Aggregator1 {
             String registryURL = "rmi://localhost:12345";
 
 
-            String objectLabel = "/Sensor1";
+            String objectLabel1 = "/Sensor1";
+            String objectLabel2 = "/Sensor2";
+            String objectLabel3 = "/Sensor3";
 
-
-            SensorInterface sensor1 = (SensorInterface) Naming.lookup(registryURL + objectLabel);
+            SensorInterface sensor1 = (SensorInterface) Naming.lookup(registryURL + objectLabel1);
+            SensorInterface sensor2 = (SensorInterface) Naming.lookup(registryURL + objectLabel2);
             /*will do the other sensors when they have been created*/
             while (true) {
                 List<Weather> sensor1Weather = sensor1.getWeatherList();
+                List<Weather> sensor2Weather = sensor2.getWeatherList();
                 wm.setSimulator1(sensor1Weather);
+                wm.setSimulator2(sensor2Weather);
                 double avg1 = wm.getAverageTemperature(sensor1Weather);
+                //double avg2 = wm.getAverageTemperature(sensor2Weather);
+               // System.out.println("average 2"+avg2);
                 System.out.println(avg1);
 
 
