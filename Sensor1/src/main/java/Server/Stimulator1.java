@@ -1,7 +1,6 @@
 package Server;
 
 import business.Sensor1;
-import business.Sensor1Server;
 import business.Weather;
 
 import java.net.MalformedURLException;
