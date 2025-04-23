@@ -30,12 +30,15 @@ public class Aggregator1 {
 
             SensorInterface sensor1 = (SensorInterface) Naming.lookup(registryURL + objectLabel1);
             SensorInterface sensor2 = (SensorInterface) Naming.lookup(registryURL + objectLabel2);
+            SensorInterface sensor3 = (SensorInterface) Naming.lookup(registryURL + objectLabel3);
             /*will do the other sensors when they have been created*/
             while (true) {
                 List<Weather> sensor1Weather = sensor1.getWeatherList();
                 List<Weather> sensor2Weather = sensor2.getWeatherList();
+                List<Weather> sensor3Weather = sensor3.getWeatherList();
                 wm.setSimulator1(sensor1Weather);
                 wm.setSimulator2(sensor2Weather);
+                wm.setSimulator3(sensor3Weather);
                 double avg1 = wm.getAverageTemperature(sensor1Weather);
                 //double avg2 = wm.getAverageTemperature(sensor2Weather);
                // System.out.println("average 2"+avg2);
