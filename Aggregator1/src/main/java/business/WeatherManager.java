@@ -65,9 +65,9 @@ public class WeatherManager extends UnicastRemoteObject implements ManagerInterf
 
     public double getAverageTemperatureOfAllSensors() throws RemoteException  {
         double avg1 = getAverageTemperature(simulator1);
-        /*double avg2 = getAverageTemperature(simulator2);
-        double avg3 = getAverageTemperature(simulator3);*/
-        return (avg1) ;
+        double avg2 = getAverageTemperature(simulator2);
+        double avg3 = getAverageTemperature(simulator3);
+        return (avg1+avg2+avg3)/3 ;
     }
 
     public double getAveragePressure(List<Weather> simulator){
