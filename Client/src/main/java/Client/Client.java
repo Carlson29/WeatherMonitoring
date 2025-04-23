@@ -17,10 +17,13 @@ public class Client {
             int portNum = 12346;
             String aggregatorURL = "rmi://localhost:" + portNum;
             String aggregator1ObjectLabel = "/Aggregator1";
+            String aggregator2ObjectLabel = "/Aggregator2";
             ManagerInterface manger1 = (ManagerInterface) Naming.lookup(aggregatorURL + aggregator1ObjectLabel);
+            ManagerInterface manger2 = (ManagerInterface) Naming.lookup(aggregatorURL + aggregator2ObjectLabel);
             while (true) {
 
                 System.out.println(" Average Temperature from aggregator1 = " + manger1.getAverageTemperatureOfAllSensors());
+                System.out.println(" Average Temperature from aggregator2 = " + manger2.getAverageTemperatureOfAllSensors());
                 Thread.sleep(5000);
             }
 
