@@ -39,9 +39,10 @@ public class Aggregator2 {
                 double avg2 = wm.getAveragePressureOfAllSensors();
                 //double avg2 = wm.getAverageTemperature(sensor2Weather);
                 // System.out.println("average 2"+avg2);
-                System.out.println(avg1);
-                System.out.println(avg2);
-
+                System.out.println("Average of temperature and pressure from 3 sensors:");
+                System.out.println("Temperature = " + avg1);
+                System.out.println("Pressure = " + avg2);
+                System.out.println("");
 
                 try {
 

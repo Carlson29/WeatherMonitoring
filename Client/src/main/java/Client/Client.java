@@ -22,13 +22,15 @@ public class Client {
             ManagerInterface manger2 = (ManagerInterface) Naming.lookup(aggregatorURL + aggregator2ObjectLabel);
             while (true) {
 
-                System.out.println(" Average Temperature from aggregator1 = " + manger1.getAverageTemperatureOfAllSensors());
-                System.out.println(" Average Pressure from aggregator1 = " + manger1.getAveragePressureOfAllSensors());
+                System.out.println("Aggregator1");
+                System.out.println("Temperature average: " + manger1.getAverageTemperatureOfAllSensors());
+                System.out.println("Pressure average: " + manger1.getAveragePressureOfAllSensors());
+                System.out.println(" ");
+                System.out.println("Aggregator2");
+                System.out.println("Temperature average: " + manger2.getAverageTemperatureOfAllSensors());
+                System.out.println("Pressure average:" + manger2.getAveragePressureOfAllSensors());
 
-                System.out.println(" Average Temperature from aggregator2 = " + manger2.getAverageTemperatureOfAllSensors());
-                System.out.println(" Average Pressure from aggregator2 = " + manger2.getAveragePressureOfAllSensors());
-
-                System.out.println("***************************************");
+                System.out.println("************************");
                 Thread.sleep(5000);
             }
 
