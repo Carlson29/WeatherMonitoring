@@ -23,7 +23,12 @@ public class Client {
             while (true) {
 
                 System.out.println(" Average Temperature from aggregator1 = " + manger1.getAverageTemperatureOfAllSensors());
+                System.out.println(" Average Pressure from aggregator1 = " + manger1.getAveragePressureOfAllSensors());
+
                 System.out.println(" Average Temperature from aggregator2 = " + manger2.getAverageTemperatureOfAllSensors());
+                System.out.println(" Average Pressure from aggregator2 = " + manger2.getAveragePressureOfAllSensors());
+
+                System.out.println("***************************************");
                 Thread.sleep(5000);
             }
 

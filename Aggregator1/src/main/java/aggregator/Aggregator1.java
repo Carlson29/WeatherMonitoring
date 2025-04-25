@@ -1,7 +1,7 @@
 package aggregator;
 
 import Interface.SensorInterface;
-import business.RemoteTaskClientImpl;
+//import business.RemoteTaskClientImpl;
 import business.Weather;
 import business.WeatherManager;
 
@@ -39,11 +39,12 @@ public class Aggregator1 {
                 wm.setSimulator1(sensor1Weather);
                 wm.setSimulator2(sensor2Weather);
                 wm.setSimulator3(sensor3Weather);
-                double avg1 = wm.getAverageTemperature(sensor1Weather);
+                double avg1 = wm.getAverageTemperatureOfAllSensors();
+                double avg2 = wm.getAveragePressureOfAllSensors();
                 //double avg2 = wm.getAverageTemperature(sensor2Weather);
                // System.out.println("average 2"+avg2);
                 System.out.println(avg1);
-
+                System.out.println(avg2);
 
                 try {
 
