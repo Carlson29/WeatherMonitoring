@@ -9,6 +9,7 @@ import java.rmi.RemoteException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class Client {
     public static void main(String[] args) {
         try {
@@ -16,8 +17,8 @@ public class Client {
 
             int portNum = 12346;
             String aggregatorURL = "rmi://localhost:" + portNum;
-            String aggregator1ObjectLabel = "/Aggregator1";
-            String aggregator2ObjectLabel = "/Aggregator2";
+            String aggregator1ObjectLabel = "/Agg1";
+            String aggregator2ObjectLabel = "/Agg2";
             ManagerInterface manger1 = (ManagerInterface) Naming.lookup(aggregatorURL + aggregator1ObjectLabel);
             ManagerInterface manger2 = (ManagerInterface) Naming.lookup(aggregatorURL + aggregator2ObjectLabel);
             while (true) {

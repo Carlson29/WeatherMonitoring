@@ -19,13 +19,13 @@ public class Sensor1 extends UnicastRemoteObject implements SensorInterface {
     }
 
     public List<Weather> getWeatherList() throws RemoteException  {
-        return weatherList;
+        return new ArrayList<>(weatherList);
     }
 
     public Weather getWeather() throws RemoteException  {
         Scanner sc = new Scanner(System.in);
-        double maxTemp = 60;
-        double minTemp = -90;
+        double maxTemp = 20;
+        double minTemp = -1;
         double temp = minTemp + Math.random() * (maxTemp - minTemp);
         double maxPressure = 1085;
         double minPressure = 870;

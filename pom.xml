@@ -15,6 +15,8 @@
         <module>Sensor2</module>
         <module>Aggregator2</module>
         <module>Sensor3</module>
+        <module>Agg1</module>
+        <module>Agg2</module>
     </modules>
 
     <properties>

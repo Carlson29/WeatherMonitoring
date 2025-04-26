@@ -3,6 +3,7 @@ package business;
 import java.io.Serializable;
 
 public class Weather implements Serializable {
+    private static final long serialVersionUID = 1L;
     private double temperature;
     private double pressure;
 
